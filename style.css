@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background: linear-gradient(45deg, #ee9ca7, #ffdde1, #a1c4fd, #c2e9fb, #82A7A6, #CBF7ED, #9CAFB7); /* Gradient background with 6 additional colors */
+    background-size: 400% 400%; /* Make the gradient larger than the viewport */
+    animation: gradientAnimation 10s ease infinite; /* Apply animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Initial position */
+    }
+    50% {
+        background-position: 100% 50%; /* Move the gradient to the right */
+    }
+    100% {
+        background-position: 0% 50%; /* Move the gradient back to the initial position */
+    }
+}
+
+
+
+
+#card{
+    height: 400px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+  
+    
+}
+#profile-img {
+    height:55%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+#profile-img.zoom {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+
+#card h1{
+    
+    font-size: 30px;
+    margin: 10px 0;
+}
+#card h5{
+    font-size:25px;
+    color:#7f8c8d;
+    margin-bottom:20px;
+}
+@keyframes colorSplash {
+    0% { background-color: cadetblue; }
+    100% { background-color: tomato; }
+}
+
+#card button{
+    background-color: cadetblue;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin:5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+    animation: none; /* Initially no animation */
+}
+
+#card button.splash {
+    animation: colorSplash 0.5s ease; /* Animation effect */
+}
